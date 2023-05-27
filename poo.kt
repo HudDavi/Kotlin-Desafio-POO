@@ -23,9 +23,8 @@ data class Bootcamp constructor(val nome: String, val conteudos: List<ConteudoEd
 data class Formacao constructor(val nome: String, val conteudos: List<ConteudoEducacional>){
     val inscritos = mutableListOf<Aluno>()
 
-    fun matricular(aluno: Aluno): String{
+    fun matricular(aluno: Aluno){
         inscritos.add(aluno)
-        return ("O aluno $aluno.nome com idade $aluno.idade foi matriculado na formação $nome")
     }
 }
 
